@@ -1,0 +1,24 @@
+.resume {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #ccc;
+}
+
+.resumeLink {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 0px;
+    padding: 20px;
+    font-size: 1.5vw;
+    background-color: #fff;
+    text-decoration: underline;
+    color: #000;
+}
+
+@media (min-width: 850px) {
+    .resume {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+}

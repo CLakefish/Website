@@ -1,0 +1,163 @@
+@font-face {
+  font-family: 'OpenDyslexic';
+  font-style: normal;
+  font-display: swap;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/opendyslexic@5.3.0/latin-400-normal.woff2) format(woff2),
+       url(https://cdn.jsdelivr.net/fontsource/fonts/opendyslexic@5.3.0/latin-400-normal.woff)  format('woff');
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+body.dyslexiaFont,
+body.dyslexiaFont * {
+  font-family: 'OpenDyslexic', sans-serif !important;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+
+@view-transition {
+    navigation: auto;
+}
+
+@keyframes wipe-out {
+    to { transform: translateY(-100%); }
+}
+
+@keyframes wipe-in {
+    from { transform: translateY(100%); }
+}
+
+::view-transition-old(root) {
+    animation: wipe-out 400ms ease-in-out both;
+}
+
+::view-transition-new(root) {
+    animation: wipe-in 400ms ease-in-out both;
+}
+
+::view-transition-old(site-header),
+::view-transition-new(site-header) {
+    animation: none;
+}
+
+.header  {
+    view-transition-name: site-header;
+    position: relative;
+    display: inline-block;
+    flex-direction: column;
+
+    width: 100%;
+    transition: all 250ms ease-in-out;
+   
+    margin: 0%;
+    padding: 0%;
+    align-items: center;  
+    justify-content: center;
+    text-align: center;
+    
+    background-color: #fff;
+}
+
+.header.hidden {
+    transform: translateY(-100%)
+}
+
+.header .buttons {
+    gap: 12px;
+    padding: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    display: block;
+}
+
+.headerButton {
+    transition: all 250ms ease-in-out;
+    transform-origin: center bottom;
+
+    display: inline-flex;
+    container-type: inline-size; 
+    border-radius: 4px;
+    padding: 10px 20px;
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: sans-serif;
+    width: 100px;
+    border: none; 
+
+    color: #000;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 0px #ffffff;
+
+    border-bottom: 4px solid #ccc; 
+    border-bottom-left-radius:  0px;
+    border-bottom-right-radius: 0px;
+}
+
+.headerButton[data-id="active"] {
+    border-bottom: 4px solid #000000;
+}
+
+.headerButton span {
+    display: inline-block; 
+    transition: transform 250ms ease-in-out;
+}
+
+.headerButton:hover span {
+    transform: scale(1.15);
+}
+
+.headerButton:hover {
+    border-bottom: 4px solid #000000;
+}
+
+.fontToggleLabel {
+    position: absolute;
+    bottom: 15px;         
+    right: 15px;          
+}
+
+.footer {
+    align-self: baseline;
+    padding: 20px;
+}
+
+.contactInfo {
+    margin-bottom: 0px;
+}
+
+@media (max-width: 950px) {
+    .header {
+        display: flex;
+    }
+
+    .fontToggleLabel {
+        position: static;
+        padding: 5px 0;
+    }
+
+    .header .buttons {
+        order: 1;
+    }
+}
