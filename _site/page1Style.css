@@ -97,7 +97,7 @@
 }
 
 .contentCell:hover .cellBox {
-    transform: scale(1.025) rotateY(0deg);
+    transform: scale(1.05) rotateY(0deg);
 }
 
 .contentCell:hover .cellFace {

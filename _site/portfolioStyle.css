@@ -1,0 +1,132 @@
+/* .tester {
+    color: #000000
+}
+
+.paragraphScroll {
+    height: 200px;
+    width: 25%;
+    overflow-y: auto;
+    border: 3px solid #bbb;
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.button-link {
+    transition: all 200ms ease-in-out;
+}
+
+.PageOneLink .button-link {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: sans-serif;
+}
+
+.PageOneLink .button-link:hover {
+    background-color: #0056b3;
+    outline: 2px solid #000000;
+} */
+
+.mainContent {
+    background-color: var(--colorBG3);
+}
+
+.contentGrid {
+    display: grid;
+    place-content: space-between; 
+    grid-template-columns: repeat(auto-fit, minmax(max(400px, calc((100% - 40px) / 3)), 1fr)); 
+    grid-auto-flow: row; 
+    max-width: 1600px;
+    gap: 20px; 
+    padding: 20px 20px;
+    margin: auto;
+    perspective: 1200px;
+}
+
+.contentCell {
+    display: flex;
+    text-decoration: none;
+    flex-direction: column;
+    position: relative; 
+    transition: all 200ms ease-in-out;
+    padding: 20px;
+}
+
+.contentCell .cellBox img {
+    margin-top: 8px; 
+    align-self: center;
+    vertical-align: middle;
+    width: 100%;
+    border-radius: 2px;
+}
+
+.cellBox {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 200ms ease-in-out;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-size: 2.0rem;
+}
+
+.cellFace {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; 
+    color: var(--colorFG);
+    background-color: var(--colorBG2);
+    padding: 20px;
+    border-radius: 2px;
+}
+
+.frontInfo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.backInfo {
+    position: absolute;
+    inset: 0;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentCell:hover .cellBox {
+    transform: scale(1.05) rotateY(0deg);
+}
+
+.contentCell:hover .cellFace {
+    background-color: var(--colorBG);
+}
+
+.contentCell:active .cellBox {
+    transform: scale(1.065);
+    background-color: var(--colorFG);
+    /*border: solid var(--colorFG) 10px;*/
+}
+
+.cellInfoTime {
+    font-size: 50%;
+    margin-top: auto;
+}
+
+.cellInfoTitle {
+    margin-top: 10px;
+}
+
+@media (max-width: 500px) {
+    .contentGrid {
+        grid-template-columns: repeat(auto-fit, 100%);
+    }
+
+    .contentCell{
+        min-width: none;
+    }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sip Fisher Page</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+        <script>
+            document.documentElement.setAttribute("data-theme",
+                localStorage.getItem("theme") ||
+                (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));
+        </script>
+
+        <link rel="stylesheet" href="/aboutStyle.css">
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+
+        <div class="header">
+            <h1>Dumb Resume Website</h1>
+            <div>Hello vro... welcome...</div>
+            <div class="buttons">
+                <a href="/index.html" class="headerButton" data-id="inactive"><span>Portfolio</span></a>
+                <a href="/Resume.html" class="headerButton" data-id="inactive"><span>Resume</span></a>
+                <a href="/About.html" class="headerButton" data-id="inactive"><span>About</span></a>
+            </div>
+
+            <label class="darkModeToggleLabel">
+                <input type="checkbox" onchange="ToggleDarkMode(this)" id="darkModeToggle">
+                Toggle Dark Mode
+            </label>
+
+            <label class="fontToggleLabel">
+                <input type="checkbox" onchange="ToggleDyslexiaFont(this)" id="fontToggle">
+                Use <a href="https://opendyslexic.org/" target="_blank" class="fontLink">OpenDyslexic</a> Font
+            </label>
+        </div>
+        
+        <h1>LOL hello</h1>
+<a>bub</a> 
+
+        <div class="footer">
+            <div class="contactTitle"><h2>Contact</h2></div>
+            <div></div>
+
+            <div class="contactInfo contactEmail">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 -2 16 16">
+                        <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
+                    </svg>
+                    <b>Email:</b> clakefish@gmail.com
+                </p>
+            </div>
+        </div>
+
+        <script src="/main.js"></script>
+    </body>
+</html>
