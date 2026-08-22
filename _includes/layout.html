@@ -16,6 +16,9 @@
         </script>
 
         {% if pageStyle %}<link rel="stylesheet" href="/{{ pageStyle }}">{% endif %}
+
+        {% for sheet in pageStyles %}<link rel="stylesheet" href="/{{ sheet }}">
+        {% endfor %}
         <link rel="stylesheet" href="/style.css">
     </head>
     <body>

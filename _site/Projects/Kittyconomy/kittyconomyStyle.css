@@ -1,0 +1,71 @@
+.gallery {
+    padding: 20px;
+    background-color: var(--colorBG2);
+}
+
+.galleryScroll {
+    padding: 10px;
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    background-color: var(--colorBG4);
+    border-radius: 4px;
+}
+
+.galleryImg {
+    height: 120px;
+    transition: all 200ms ease-in-out;
+    width: auto;
+    border-radius: 4px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    cursor: zoom-in;
+}
+
+.galleryImg:hover {
+    transform: scale(1.025);
+}
+
+.mainContent {
+    display: flex;
+    align-items: stretch;
+    padding: 20px;
+    gap: 20px;
+    background-color: var(--colorBG2);
+    align-items: center;
+}
+
+.description {
+    font-size: 1.5rem;
+}
+
+.timeline h1 {
+    margin: 0;
+    font-size: 3rem;
+    line-height: 2;
+}
+
+.timeline p {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.title h1 {
+    padding: 0px;
+    margin: 0px;
+    height: 100px;
+}
+
+@media (max-width: 950px) {
+    .mainContent {
+        flex-direction: column;
+    }
+
+
+    .gameLink img {
+        width: 100%;
+        max-width: 600px;
+        align-self: center;
+    }
+}

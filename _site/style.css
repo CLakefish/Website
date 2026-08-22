@@ -1,3 +1,27 @@
+
+/* Themes */
+[data-theme="light"] {
+  --colorBG: #f7f6fd;
+  --colorBG2: #e7e5f1;
+  --colorBG3: #d1cfe1;
+  --colorBG4: #b6b2cc;
+  --colorFG: #030205;
+
+   color-scheme: light; 
+}
+
+[data-theme="dark"] {
+  --colorBG:  #30303f;
+  --colorBG2: #181822;
+  --colorBG3: #0c0c13;
+  --colorBG4: #030205;
+  --colorFG: #f7f6fd;
+
+   color-scheme: dark;
+}
+
+
+/* Font bs */
 @font-face {
   font-family: 'OpenDyslexic';
   font-style: normal;
@@ -6,27 +30,10 @@
        url(https://cdn.jsdelivr.net/fontsource/fonts/opendyslexic@5.3.0/latin-400-normal.woff)  format('woff');
 }
 
-
-[data-theme="light"] {
-  --colorBG: #fff;
-  --colorBG2: #eee;
-  --colorBG3: #ccc;
-  --colorBG4: #aaa;
-  --colorFG: #000;
-}
-
-[data-theme="dark"] {
-  --colorBG: #000;
-  --colorBG2: #444;
-  --colorBG3: #222;
-  --colorBG4: #1a1a1a;
-  --colorFG: #fff;
-}
-
-
 body {
     background-color: var(--colorBG);
     color: var(--colorFG);
+    /* Required font bs */
     font-family: 'Inter', sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
@@ -37,6 +44,9 @@ body.dyslexiaFont,
 body.dyslexiaFont * {
   font-family: 'OpenDyslexic', sans-serif !important;
 }
+
+
+/* Sizing fix for transitions (weird clipping without it)*/
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -51,9 +61,20 @@ html {
     overflow-y: scroll;
 }
 
+/* Links */
+a, 
+a:visited, 
+a:hover, 
+a:active {
+    color: var(--colorFG);
+}
+
 .externalLink svg {
     fill: currentColor;
 }
+
+
+/* Transitions */
 
 @view-transition {
     navigation: auto;
@@ -80,6 +101,7 @@ html {
     animation: none;
 }
 
+/* Default header & footer */
 .header  {
     view-transition-name: site-header;
     position: relative;
@@ -166,13 +188,6 @@ html {
     right: 15px;          
 }
 
-a, 
-a:visited, 
-a:hover, 
-a:active {
-    color: var(--colorFG);
-}
-
 .footer {
     align-self: baseline;
     padding: 20px;
@@ -182,6 +197,28 @@ a:active {
     margin-bottom: 0px;
 }
 
+
+
+/* Cells */
+
+.cellTags {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 5px;
+    padding: 0px;
+    margin-top: 10px;
+    order: 100;
+}
+
+.cellTag {
+    font-size: 0.85rem;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background-color: var(--colorBG3);
+    color: var(--colorFG);
+}
+
+/* Stupid sizing fixes */
 @media (max-width: 950px) {
     .header {
         display: flex;

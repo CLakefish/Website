@@ -22,9 +22,22 @@
     color: var(--colorFG);
 }
 
+@media (max-width: 1150px){
+    .resume {
+        height: 100%;
+    }
+}
+
 @media (min-width: 850px) {
     .resume {
         padding-left: 5vw;
         padding-right: 5vw;
+    }
+}
+
+@media (min-width: 1200px) {
+    .resume {
+        padding-left: 15vw;
+        padding-right: 15vw;
     }
 }

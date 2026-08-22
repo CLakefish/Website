@@ -64,6 +64,30 @@ function GetGreeting() {
 
 GetGreeting();
 
+const lightbox = document.getElementById("lightbox");
+
+if (lightbox) {
+    const lightboxImg = document.getElementById("lightboxImg");
+    const lightboxCaption = document.getElementById("lightboxCaption");
+
+    document.querySelectorAll(".galleryImg").forEach((img) => {
+        img.setAttribute("tabindex", "0");
+
+        img.addEventListener("click", () => {
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightboxCaption.textContent = img.alt;
+            lightbox.showModal();
+        });
+
+        img.addEventListener("keydown", (e) => {
+            if (e.key === "Enter") img.click();
+        });
+    });
+
+    lightbox.addEventListener("click", () => lightbox.close());
+}
+
 /* 
 window.addEventListener("pagereveal", (e) => {
     e.viewTransition?.ready.catch(() => {});

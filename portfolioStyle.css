@@ -1,42 +1,10 @@
-/* .tester {
-    color: #000000
-}
-
-.paragraphScroll {
-    height: 200px;
-    width: 25%;
-    overflow-y: auto;
-    border: 3px solid #bbb;
-    background-color: #ddd;
-    border-radius: 5px;
-}
-
-.button-link {
-    transition: all 200ms ease-in-out;
-}
-
-.PageOneLink .button-link {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-family: sans-serif;
-}
-
-.PageOneLink .button-link:hover {
-    background-color: #0056b3;
-    outline: 2px solid #000000;
-} */
-
 .mainContent {
-    background-color: var(--colorBG3);
+    background-color: var(--colorBG4);
 }
 
 .contentGrid {
     display: grid;
+    background-color: var(--colorBG3);
     place-content: space-between; 
     grid-template-columns: repeat(auto-fit, minmax(max(400px, calc((100% - 40px) / 3)), 1fr)); 
     grid-auto-flow: row; 
@@ -45,6 +13,7 @@
     padding: 20px 20px;
     margin: auto;
     perspective: 1200px;
+    justify-items: center;
 }
 
 .contentCell {
@@ -54,6 +23,7 @@
     position: relative; 
     transition: all 200ms ease-in-out;
     padding: 20px;
+    width: min(100%, 550px);
 }
 
 .contentCell .cellBox img {
@@ -63,6 +33,26 @@
     width: 100%;
     border-radius: 2px;
 }
+
+/*.contentCell .cellBox img.igfAward {
+    position: absolute;
+    transition: all 200ms ease-in-out;
+    bottom: 0px;
+    right: 0px;
+    background-color: rgba(0, 0, 0, .8);
+    border-radius: 50px;
+    padding: 10px;
+    width: 25%;
+    height: auto;
+}
+
+ .contentCell .cellBox img.igfAward:hover {
+    transform: scale(1.1);
+}
+
+.contentCell .cellBox img.igfAward:active {
+    transform: scale(2.0);
+} */
 
 .cellBox {
     position: relative;
@@ -75,6 +65,7 @@
 }
 
 .cellFace {
+    cursor: pointer;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden; 
     color: var(--colorFG);
@@ -109,7 +100,6 @@
 .contentCell:active .cellBox {
     transform: scale(1.065);
     background-color: var(--colorFG);
-    /*border: solid var(--colorFG) 10px;*/
 }
 
 .cellInfoTime {
@@ -121,6 +111,23 @@
     margin-top: 10px;
 }
 
+.platformIndicator {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 12.5%;
+    animation: swing 2s ease-in-out infinite alternate;
+    animation-delay: random(-1s, 1s); 
+    filter: drop-shadow(0px 0px 5px #dd9c11);
+}
+
+.platformIndicator[data-id="coolMathGames"] {
+    position: absolute;
+    top: -25px;
+    left: -20px;
+    width: 50%;
+}
+
 @media (max-width: 500px) {
     .contentGrid {
         grid-template-columns: repeat(auto-fit, 100%);
@@ -129,4 +136,19 @@
     .contentCell{
         min-width: none;
     }
+}
+
+@media (max-width: 400px) {
+    .contentCell {
+        padding: 0px;
+    }
+}
+
+@keyframes swing {
+  from {
+    transform: rotate(-5deg);
+  }
+  to {
+    transform: rotate(5deg);
+  }
 }

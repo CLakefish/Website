@@ -7,5 +7,7 @@ export default function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("Projects/**/*.css");
     eleventyConfig.addPassthroughCopy("Projects/**/*.png");
     eleventyConfig.addPassthroughCopy("Projects/**/*.jpg");
+    eleventyConfig.addPassthroughCopy("Projects/**/*.js");
+    eleventyConfig.addPassthroughCopy("Projects/**/*.html");
     eleventyConfig.ignores.add("README.md");
 };

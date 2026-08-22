@@ -15,7 +15,11 @@
                 (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));
         </script>
 
-        <link rel="stylesheet" href="/kittyconomyStyle.css">
+        
+
+        <link rel="stylesheet" href="/lightbox.css">
+        <link rel="stylesheet" href="/Projects/Kittyconomy/kittyconomyStyle.css">
+        
         <link rel="stylesheet" href="/style.css">
     </head>
     <body>
@@ -24,7 +28,7 @@
             <h1>Dumb Resume Website</h1>
             <div>Hello vro... welcome...</div>
             <div class="buttons">
-                <a href="/index.html" class="headerButton" data-id="inactive"><span>Portfolio</span></a>
+                <a href="/index.html" class="headerButton" data-id="active"><span>Portfolio</span></a>
                 <a href="/Resume.html" class="headerButton" data-id="inactive"><span>Resume</span></a>
                 <a href="/About.html" class="headerButton" data-id="inactive"><span>About</span></a>
             </div>
@@ -40,7 +44,108 @@
             </label>
         </div>
         
-        <h1>LOL</h1> 
+        <div class="showcase">
+    <div class="mainContent">
+        <a href="https://www.coolmathgames.com/0-kittyconomy" target="_blank" class="gameLink">
+            <img src="Projects/Kittyconomy/web.png" alt="Playable Browser Version">
+        </a>
+
+        <div class="topContent">
+            <div class="timeline">
+                <h1>Kittyconomy</h1>
+                <p>Solo Project</p>
+                <p class="winTag">3rd Place Winner</p>
+                <p>May 14th - June 7th</p>
+                <p>Unity 6000.2.15f1</p>
+            </div>
+
+            <p class="description">
+                <b>Kittyconomy</b> was a solo game jam project made for the <a href="https://itch.io/jam/coolmath-game-jam-2026" target="_blank">Cool Math Games Game Jam 2026</a>, a 34 day long game jam that I joined <i>10 days late</i>... 
+                The project was made in Unity w/C#, alongside github and visual studio. The project <b>placed 3rd out of 136 entries, won $5,000, and is up on the CoolMathGames website to play for free!</b>  
+            </p>
+
+            <p class="responsibilities">
+                It was a solo project, I was responsible for everything. Design, programming, art, animation, UI, audio implementation, playtesting, and financial-education research to make sure the game taught concepts correctly. 
+            </p>
+        </div>
+    </div>
+
+    <div class="gallery">
+        <div class="galleryScroll">
+            <img class="galleryImg" src="Projects/SipFisher/Main Capsule.png" alt="Sip Fisher">
+            <img class="galleryImg" src="Projects/SipFisher/Main Capsule.png" alt="Sip Fisher">
+            <img class="galleryImg" src="Projects/SipFisher/Main Capsule.png" alt="Sip Fisher">
+            <img class="galleryImg" src="Projects/SipFisher/Main Capsule.png" alt="Sip Fisher">
+            <img class="galleryImg" src="Projects/SipFisher/Main Capsule.png" alt="Sip Fisher">
+            <img class="galleryImg" src="Projects/SipFisher/Main Capsule.png" alt="Sip Fisher">
+            <img class="galleryImg" src="Projects/SipFisher/Main Capsule.png" alt="Sip Fisher">
+            <img class="galleryImg" src="Projects/SipFisher/Main Capsule.png" alt="Sip Fisher">
+            <img class="galleryImg" src="Projects/SipFisher/Main Capsule.png" alt="Sip Fisher">
+        </div>
+    </div>
+
+    <div class="section1">
+        <div class="hook">
+            <h1>Making a Math Game that doesn't feel like a "Math Game"</h1>
+            <p>
+                Like most of my peers, I grew up playing games on Cool Math Games back in elementary school. 
+                There was always a clear divide for the games I'd play: the games that were fun and the games that taught you something.
+                As a little kid, I cared most about what game was most engaging, the easier it is to pass the time the better. Almost nothing could accomplish engagement <i>and</i> teach me something, and the math-centric games felt as engaging as doing your taxes. 
+                So when I entered the Cool Math Game Jam, my most important design pillar was simple: <b>the game cannot feel like a 'math' game</b>. 
+                Every mechanic had to be simple, easy to follow, and engaging on its own terms. All while still genuinely teaching financial concepts, like loans, interest, investing, and the difference between simple and compound interest.
+                <br> <br>
+            </p>
+        </div>
+
+        <div class="subsection1 designPillars">
+            <h2>Design Pillars</h2>
+            <p>
+                Beyond the core pillar, every decision was tested against <b>3 major questions</b> asked from the point of view of elementary-schooler me:
+                <ol>
+                    <li>Would I be engaged? Or would I click off to go play Run 2 again?</li>
+                    <li>Would I take something away from this game?</li>
+                    <li>Is the style wacky enough to make me <i>want</i> to play it in the first place?</li>
+                </ol>
+                Any and all ideas posed by myself and playtesters were run through this criteria. At worst they were put into a pile of 'potential reworks', at best they were honed to fit all criteria and simplicity.
+            
+                <br><br>
+                                
+                Obviously the title of a game being a 'math' game is not enough information to reason your way out of that label, you have to test for it repeatedly and refine its definition.
+                
+                Over three and a half weeks I ran 36 playtests across 18 builds, watching people play and collecting their thoughts.
+                After every playtest I asked the same questions, everything listed in the design pillars and the obligatory, <i>"Does it feel like a math game?"</i>.
+                Every single "kinda" or "maybe" sent me back to rework the mechanic(s) until the answers were more consistently, "nope".
+            
+            </p>
+        </div>
+
+        <div class="subsection1 takeaways">
+            <h2>Important Takeaways</h2>
+            <p>
+                - 
+            </p>
+        </div>
+    </div>
+
+    <div class="section2">
+        <h1>Technical Experimentation</h1>
+        <p>
+            - graphics w/the render texture(s), game event system, and utility kit.
+        </p>
+    </div>
+</div>
+
+<dialog id="lightbox">
+    <figure>
+        <img id="lightboxImg" src="" alt="">
+        <figcaption id="lightboxCaption"></figcaption>
+    </figure>
+    
+    <form method="dialog">
+        <button class="closeButton">X</button>
+    </form>
+</dialog>
+ 
 
         <div class="footer">
             <div class="contactTitle"><h2>Contact</h2></div>
