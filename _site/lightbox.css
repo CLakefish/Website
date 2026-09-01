@@ -1,11 +1,27 @@
 /* Same thing as getting CSS by ID not class */
 #lightbox {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
     padding: 0;
     border: none;
     background: transparent;
-    max-width: 90vw;
-    transition: all 200ms ease-in-out;
-    position: relative;
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity: 0;
+}
+
+#lightbox[open] {
+    transform: scale(1.0);
+    opacity: 1;
+}
+
+@starting-style {
+    #lightbox[open] {
+        transform: scale(0.5);
+        opacity: 0;
+    }
 }
 
 #lightbox figure {
@@ -54,5 +70,5 @@
 }
 
 #lightbox .closeButton:hover {
-    background-color: rgba(#ccc, #ccc, #ccc, 0.5);
+    background-color: rgba(#ccc, #ccc, #ccc);
 }

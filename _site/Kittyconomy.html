@@ -15,18 +15,17 @@
                 (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));
         </script>
 
-        
-
-        <link rel="stylesheet" href="/lightbox.css">
         <link rel="stylesheet" href="/Projects/Kittyconomy/kittyconomyStyle.css">
+
         
+        <link rel="stylesheet" href="/lightbox.css">
         <link rel="stylesheet" href="/style.css">
     </head>
     <body>
 
         <div class="header">
-            <h1>Dumb Resume Website</h1>
-            <div>Hello vro... welcome...</div>
+            <h1>Resume Website</h1>
+            <div>hello bro</div>
             <div class="buttons">
                 <a href="/index.html" class="headerButton" data-id="active"><span>Portfolio</span></a>
                 <a href="/Resume.html" class="headerButton" data-id="inactive"><span>Resume</span></a>
@@ -47,105 +46,169 @@
         <div class="showcase">
     <div class="mainContent">
         <a href="https://www.coolmathgames.com/0-kittyconomy" target="_blank" class="gameLink">
-            <img src="Projects/Kittyconomy/web.png" alt="Playable Browser Version">
+            <img src="Projects/Kittyconomy/web.png" alt="Playable Browser Link">
+            <span class="clickableCaption">Click me to play on CoolMathGames!</span>
         </a>
 
         <div class="topContent">
             <div class="timeline">
-                <h1>Kittyconomy</h1>
+                <!-- <h1 class="title">Kittyconomy</h1> -->
+                <img src="/Projects/Kittyconomy/k2y8LR.gif" alt="Kittyconomy">
                 <p>Solo Project</p>
                 <p class="winTag">3rd Place Winner</p>
                 <p>May 14th - June 7th</p>
                 <p>Unity 6000.2.15f1</p>
             </div>
 
-            <p class="description">
-                <b>Kittyconomy</b> was a solo game jam project made for the <a href="https://itch.io/jam/coolmath-game-jam-2026" target="_blank">Cool Math Games Game Jam 2026</a>, a 34 day long game jam that I joined <i>10 days late</i>... 
-                The project was made in Unity w/C#, alongside github and visual studio. The project <b>placed 3rd out of 136 entries, won $5,000, and is up on the CoolMathGames website to play for free!</b>  
-            </p>
-
-            <p class="responsibilities">
-                It was a solo project, I was responsible for everything. Design, programming, art, animation, UI, audio implementation, playtesting, and financial-education research to make sure the game taught concepts correctly. 
-            </p>
+            <div class="description">
+                <p>
+                    <b>Kittyconomy</b> is a tower-defense-meets-economics game where you shoot fish at hungry cats while juggling loans, investments, and compound interest. The project was made solo for the <a href="https://itch.io/jam/coolmath-game-jam-2026" target="_blank">Cool Math Games Game Jam 2026</a>, a 34 day long game jam that I joined <i>10 days late</i>... 
+                    The project was made in Unity w/C#, utilizing github and visual studio.                 
+                    <span class="winLine">The project placed 3rd out of 136 entries, won $5,000, and is up on the CoolMathGames website to play for free!</span> 
+                </p>
+            </div>
         </div>
     </div>
+
+    <details class="responsibilities">
+        <summary>Responsibilities</summary>
+
+        <div class="responsibilitiesSubArea">
+            <p>
+                As a solo project, nearly every part of it is mine: design, programming, art, animation, UI, music, playtesting, and the financial-education research behind the mechanics.
+                This includes:
+            </p>
+
+            <ul>
+                <li>Designed and tuned the core loop through <span class="boldedSubtext">36 playtests across 18 builds</span>, testing every mechanic against one core pillar: <span class="boldedSubtext">it cannot feel like a "math game".</span></li>
+                <li>Iterated the loan system's UX <span class="boldedSubtext">until math-averse playtesters could read simple vs. compound interest at a glance</span> w/a projected gain/loss timeline on every offer.</li>
+                <li>Built an event-driven architecture (central event bus + ScriptableObject modifiers) so <span class="boldedSubtext">new mechanics were assets, not new systems.</span> Chosen specifically to fail fast on a 24-day timeline.</li>
+                <li>Researched the financial concepts being taught to make sure the mechanics modeled them correctly within the game setting.</li>
+                <li>Shipped to CoolMathGames' 800×600px embed size with a <span class="boldedSubtext">fixed 16:9 render-texture and letterboxed UI.</span></li>
+                <li><span class="boldedSubtext">Created all art and animation with aseprite.</span></li>
+                <li>Sound effects were sourced from Pixabay under the pixabay license, the list of all assets can be found both in-game and in writing. </li>
+            </ul>
+        </div>
+    </details>
 
     <div class="gallery">
         <div class="galleryScroll">
-            <img class="galleryImg" src="Projects/SipFisher/Main Capsule.png" alt="Sip Fisher">
-            <img class="galleryImg" src="Projects/SipFisher/Main Capsule.png" alt="Sip Fisher">
-            <img class="galleryImg" src="Projects/SipFisher/Main Capsule.png" alt="Sip Fisher">
-            <img class="galleryImg" src="Projects/SipFisher/Main Capsule.png" alt="Sip Fisher">
-            <img class="galleryImg" src="Projects/SipFisher/Main Capsule.png" alt="Sip Fisher">
-            <img class="galleryImg" src="Projects/SipFisher/Main Capsule.png" alt="Sip Fisher">
-            <img class="galleryImg" src="Projects/SipFisher/Main Capsule.png" alt="Sip Fisher">
-            <img class="galleryImg" src="Projects/SipFisher/Main Capsule.png" alt="Sip Fisher">
-            <img class="galleryImg" src="Projects/SipFisher/Main Capsule.png" alt="Sip Fisher">
+            <img class="galleryImg" src="Projects/Kittyconomy/gameplay1.gif" alt="Active Kittyconomy Gameplay Footage">
+            <img class="galleryImg" src="Projects/Kittyconomy/gameplay2.gif" alt="Kittyconomy Loan/Investment Footage">
+            <img class="galleryImg" src="Projects/Kittyconomy/gameplay3.gif" alt="Kittyconomy Stash Upgrade Footage">
+            <img class="galleryImg" src="Projects/Kittyconomy/5YXWf0.png" alt="Gameplay Picture">
+            <img class="galleryImg" src="Projects/Kittyconomy/i0SsFe.png" alt="Banksman Boss (first form)">
+            <img class="galleryImg" src="Projects/Kittyconomy/Fellas-Sheet.png" alt="Cat Spritesheet">
+            <img class="galleryImg" src="Projects/Kittyconomy/Characters-Sheet.png" alt="Investor Spritesheet">
+            <img class="galleryImg" src="Projects/Kittyconomy/Bankman-Sheet.png" alt="Banksman Spritesheet">
         </div>
     </div>
+</div>
 
-    <div class="section1">
-        <div class="hook">
-            <h1>Making a Math Game that doesn't feel like a "Math Game"</h1>
-            <p>
-                Like most of my peers, I grew up playing games on Cool Math Games back in elementary school. 
-                There was always a clear divide for the games I'd play: the games that were fun and the games that taught you something.
-                As a little kid, I cared most about what game was most engaging, the easier it is to pass the time the better. Almost nothing could accomplish engagement <i>and</i> teach me something, and the math-centric games felt as engaging as doing your taxes. 
-                So when I entered the Cool Math Game Jam, my most important design pillar was simple: <b>the game cannot feel like a 'math' game</b>. 
-                Every mechanic had to be simple, easy to follow, and engaging on its own terms. All while still genuinely teaching financial concepts, like loans, interest, investing, and the difference between simple and compound interest.
-                <br> <br>
-            </p>
-        </div>
 
-        <div class="subsection1 designPillars">
-            <h2>Design Pillars</h2>
-            <p>
-                Beyond the core pillar, every decision was tested against <b>3 major questions</b> asked from the point of view of elementary-schooler me:
-                <ol>
-                    <li>Would I be engaged? Or would I click off to go play Run 2 again?</li>
-                    <li>Would I take something away from this game?</li>
-                    <li>Is the style wacky enough to make me <i>want</i> to play it in the first place?</li>
-                </ol>
-                Any and all ideas posed by myself and playtesters were run through this criteria. At worst they were put into a pile of 'potential reworks', at best they were honed to fit all criteria and simplicity.
-            
-                <br><br>
-                                
-                Obviously the title of a game being a 'math' game is not enough information to reason your way out of that label, you have to test for it repeatedly and refine its definition.
-                
-                Over three and a half weeks I ran 36 playtests across 18 builds, watching people play and collecting their thoughts.
-                After every playtest I asked the same questions, everything listed in the design pillars and the obligatory, <i>"Does it feel like a math game?"</i>.
-                Every single "kinda" or "maybe" sent me back to rework the mechanic(s) until the answers were more consistently, "nope".
-            
-            </p>
-        </div>
-
-        <div class="subsection1 takeaways">
-            <h2>Important Takeaways</h2>
-            <p>
-                - 
-            </p>
-        </div>
-    </div>
-
-    <div class="section2">
-        <h1>Technical Experimentation</h1>
+<div class="section section1">
+    <div class="hook">
+        <h1>Making a Math Game that doesn't feel like a "Math Game"</h1>
         <p>
-            - graphics w/the render texture(s), game event system, and utility kit.
+            Like most of my peers, I grew up playing games on Cool Math Games back in elementary school. 
+            There was always a clear divide for the games I'd play: the games that were fun and the games that taught you something.
+            As a little kid, I cared most about what game was most engaging, the easier it is to pass the time the better. Almost nothing could accomplish engagement <i>and</i> teach me something, and the math-centric games felt as engaging as doing your taxes. 
+            So when I entered the Cool Math Game Jam, my most important design pillar was simple: <b>the game cannot feel like a 'math' game</b>. 
+            Every mechanic had to be simple, easy to follow, and engaging on its own terms. All while still genuinely teaching financial concepts, like loans, interest, investing, and the difference between simple and compound interest.
+            <br> <br>    
+        </p>
+    </div>
+
+    <div class="subsection1 designPillars">
+        <h2>Design Pillars</h2>
+        <p>
+            Beyond the core pillar, every decision was tested against <b>3 major questions</b> asked from the point of view of elementary-schooler me:
+            <ol>
+                <li>Would I be engaged? Or would I click off to go play Run 2 again?</li>
+                <li>Would I take something away from this game?</li>
+                <li>Is the style wacky enough to make me want to play it in the first place?</li>
+            </ol>
+            Any and all ideas posed by myself and playtesters were run through this criteria. At worst they were put into a pile of 'potential reworks', at best they were honed to fit all criteria and simplicity.
+        
+            <br><br>
+                            
+            Obviously the title of a game being a 'math' game is not enough information to reason your way out of that label, you have to test for it repeatedly and refine its definition.
+            
+            Over three and a half weeks I ran 36 playtests across 18 builds, watching people play and collecting their thoughts.
+            After every playtest I asked the same questions, everything listed in the design pillars and the obligatory, <b>"Does it feel like a math game?"</b>.
+            Every single "kinda" or "maybe" sent me back to rework the mechanic(s) until the answers were more consistently, "nope".
+        </p>
+    </div>
+
+    <div class="projectStructure">
+        <h2>Project Structure</h2>
+        <p>
+            Before I could get into the design, I needed to fail fast with my iterations considering the subjects being covered were difficult to explain simply, such as simple vs compound interest. 
+            To manage the time deficit, a good portion of my project's time went into building the backend systems as flexibly as possible.
+            I took advantage of a godot-like signal system I made myself alongside finite statemachines for every core mechanic and game system. It allowed me to flowchart the core loop and quickly debug any issues which popped up; it was well worth the extra effort.
+            Each individual upgrade was its own scriptable object in unity which could be handled generically by a designated system.
+            This in turn made adding unique mechanics much easier, not to mention the flexibility with other systems this setup offered. 
+        
+            <br> <br>
+            Once this general setup was achieved I began really concepting the core gameplay out.
+            At the beginning of development the structure for the game was simple; you were a fish seller shooting fish at hungry cat customers, a sort of tower defense mixed with economic incentive, genres I've never dabbled in before. Fish cost money to shoot, cats give you money back for feeding them, and if you run out of money you would slowly go bankrupt.
+            When a customer was fed they'd pay you what they owe, leave, and customers come in large delayed waves. Once all customers are fed and the wave wraps up, you'd be given loan or investment opportunities by local investors/sponsors.
+            Compounding or simple interest would apply to some fee, be it annual or one time only before some deadline, but in exchange you would get a uniquely interesting upgrade. Such as your turrets shooting swordfish, getting different turrets, fish angering nearby bees, etc...
+            Lastly, waves of customers got larger as the game progressed, slowly introducing the player to more cat types alongside increasing their general profit margins.
+        </p>
+    </div>
+
+    <div class="subsection1 iterations">
+        <h2>When the loans defaulted</h2>
+        <p>
+            My biggest concern going in was the educational aspect. It was clearly possible to build mechanics off of core financial concepts; the problem was whether they actually learned anything.
+            During the first few playtests, it was clear the loans themselves felt unintuitive and rather uninteresting, not to mention the game was quite hard to beat.
+            A change to some numerical value really doesn't impact the user even if it's enunciated at first and constantly shown. It never felt like you would lose from taking a risk with a loan. Worse than that, users found it difficult to understand the difference between simple and compound interest.
+            <br> <br>
+            Before I could get into the weeds of the problem, I needed something to be consistent, so I didn't dig myself into a design hole. If everything changed, I'd get nowhere; I wouldn't be able to tell what changes really mattered. Keeping the waves as my control variable meant the feedback from playtesting was attributed to the systems I was actually reworking.
+            <br> <br>
+            Now, to combat the issues mentioned prior, I changed around how the loans would negatively impact the player and how the game communicated your financial standing. Loans would impact the player more than just fees, it would alter other upgrades, turrets, on-hit chances, and profit margins to make the game more challenging.
+            Alongside that change, I added in a loan processing screen to help with the numerical aspect of loans and investments. A popup that would go one by one and show you each loan, how it would affect you now or later, and how the interest rate changes it.
+            <br> <br>
+            This was shown to be an improvement, but then I had my mom playtest (who notoriously hates doing math). She really disliked the game but couldn't tell me why. To her, it felt unintuitive, like a chore she had to get through, and quite simply she just wasn't having fun. 
+            <br> <br>
+            Back to the drawing board, and out of a myriad of ideas, one really stuck with me. What if I could visually display the expected gain/loss from loan fees or investments <i>before</i> you took them?
+            It didn't need to be in-depth, just enough to show you what you could expect to gain or lose with a simple timeline at the bottom of every loan description. Alongside green-red color coding and positive/negative signs for numeric information.
+            Later playtests with people who also <i>greatly</i> disliked math proved it was a large improvement for engagement and financial concepts, although the layout needed some tweaks, which I happily worked on.
+        </p>
+    </div>
+
+    <div class="subsection1 iterations">
+        <h2>Takeaways</h2>
+        <p>
+            The biggest lesson from this short-lived project: players don't learn from numbers alone; even if they're shown over time, they learn from seeing the final, tangible consequences, however they're displayed. 
+            Beyond that, upgrades proved to be humorous and interesting as the game progressed; occasionally they'd break the game to the point of breaking the final graph display too, which is fun!
+            If I were to redo this project, I would change the order I did playtesting and have those who dislike math the most do the first round rather than the second/third.
+            Their feedback at earlier stages would've saved me a bit more time overall, as it would've been easier to see the holes in the design and how best to fix them without having to worry about polish.
         </p>
     </div>
 </div>
 
-<dialog id="lightbox">
-    <figure>
-        <img id="lightboxImg" src="" alt="">
-        <figcaption id="lightboxCaption"></figcaption>
-    </figure>
-    
-    <form method="dialog">
-        <button class="closeButton">X</button>
-    </form>
-</dialog>
- 
+<div class="section section2">
+    <h1>Technical Experimentation</h1>
+    <p>
+        Although design was this projects main focus, who says I can't experiment with other things as well? 
+        <br><br>
+        Every core gameplay system communicates through a central event bus, some forty static events covering waves, enemies, currency, loans, and player state.
+        Systems react to each other without polling or direct wiring. The content itself is a plugin layer of ScriptableObject modifiers with lifecycle hooks; i.e., a turret modifier can react to OnApply or OnShoot, but a bullet modifier can intercept a bullet before it spawns, on every tick, or at the moment of impact.
+        New mechanics were new assets, not new systems, such as the swordfish turret, the bee aggravation, and every loan penalty.
+        Bullets or 'fish' as they're labeled in game have a runtime stat registry, a sort of blackboard so modifiers can stash arbitrary typed states on bullets without the Bullet knowing anything about them.
+        <br> <br>
+        The piece that made loans mechanically functional was a stat-modifier pipeline, every tunable number in the game is a ModifiableValue and any system can stack set, additive, and multiplicitive modifiers onto it in a defined order.
+        Results are cached until something is actively changed, but when an active loan makes your turrets worse for example, its a stat-modifier pushed from the loan system into the event bus to subscribed systems.
+        <br> <br>
+        Shipping to CoolMathGames, I knew I should expect an 800x600 pixel resolution in the web browser, but I wasn't sure if the players could fullscreen it, and I've had my fair share of troubles with aspect ratios in the past.
+        To tackle this, I render the game to a texture of a fixed size with an aspect ratio of 16:9, then present it as a letterboxed UI element.
+        The reason for the 16:9 aspect ratio was for the black bars across the top and bottom at 800x600, the default resolution, so that the UI for the money, waves, and healthbar didn't take up any space that was unneeded.
+        As a bonus, it was quite easy to apply my own custom shaders to the game itself, things like warping and discoloration, but nothing too difficult.
+        The caveat of this approach is that raycasting from the mouse position, and really any conversions between screen and world, have to go through new conversion functions, but it was worth the effort!
+    </p>
+</div> 
 
         <div class="footer">
             <div class="contactTitle"><h2>Contact</h2></div>
@@ -160,6 +223,18 @@
                 </p>
             </div>
         </div>
+
+
+        <dialog id="lightbox">
+            <figure>
+                <img id="lightboxImg" src="" alt="">
+                <figcaption id="lightboxCaption"></figcaption>
+            </figure>
+            
+            <form method="dialog">
+                <button class="closeButton">X</button>
+            </form>
+        </dialog>
 
         <script src="/main.js"></script>
     </body>

@@ -18,13 +18,14 @@
         <link rel="stylesheet" href="/aboutStyle.css">
 
         
+        <link rel="stylesheet" href="/lightbox.css">
         <link rel="stylesheet" href="/style.css">
     </head>
     <body>
 
         <div class="header">
-            <h1>Dumb Resume Website</h1>
-            <div>Hello vro... welcome...</div>
+            <h1>Resume Website</h1>
+            <div>hello bro</div>
             <div class="buttons">
                 <a href="/index.html" class="headerButton" data-id="active"><span>Portfolio</span></a>
                 <a href="/Resume.html" class="headerButton" data-id="inactive"><span>Resume</span></a>
@@ -58,6 +59,18 @@
                 </p>
             </div>
         </div>
+
+
+        <dialog id="lightbox">
+            <figure>
+                <img id="lightboxImg" src="" alt="">
+                <figcaption id="lightboxCaption"></figcaption>
+            </figure>
+            
+            <form method="dialog">
+                <button class="closeButton">X</button>
+            </form>
+        </dialog>
 
         <script src="/main.js"></script>
     </body>
