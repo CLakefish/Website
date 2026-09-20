@@ -1,8 +1,4 @@
-import { HtmlBasePlugin } from "@11ty/eleventy";
-
 export default function (eleventyConfig) {
-    eleventyConfig.addPlugin(HtmlBasePlugin);
-
     eleventyConfig.addPassthroughCopy("*.css");
     eleventyConfig.addPassthroughCopy("main.js");
     eleventyConfig.addPassthroughCopy("*.pdf");
