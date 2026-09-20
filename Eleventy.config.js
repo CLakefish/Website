@@ -1,4 +1,8 @@
+import { HtmlBasePlugin } from "@11ty/eleventy";
+
 export default function (eleventyConfig) {
+    eleventyConfig.addPlugin(HtmlBasePlugin);
+
     eleventyConfig.addPassthroughCopy("*.css");
     eleventyConfig.addPassthroughCopy("main.js");
     eleventyConfig.addPassthroughCopy("*.pdf");
@@ -12,4 +16,8 @@ export default function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("Projects/**/*.js");
     eleventyConfig.addPassthroughCopy("Projects/**/*.html");
     eleventyConfig.ignores.add("README.md");
+
+    return {
+        pathPrefix: "/Website/"
+    };
 };
