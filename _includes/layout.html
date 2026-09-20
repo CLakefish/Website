@@ -15,12 +15,13 @@
                 (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));
         </script>
 
-        {% if pageStyle %}<link rel="stylesheet" href="./{{ pageStyle }}">{% endif %}
+        {% if pageStyle %}<link rel="stylesheet" href="{{ pageStyle | url }}">{% endif %}
 
-        {% for sheet in pageStyles %}<link rel="stylesheet" href="./{{ sheet }}">
+        {% for sheet in pageStyles %}<link rel="stylesheet" href="{{ sheet | url }}">
         {% endfor %}
-        <link rel="stylesheet" href="./lightbox.css">
-        <link rel="stylesheet" href="./style.css">
+
+        <link rel="stylesheet" href="{{ '/lightbox.css' | url }}">
+        <link rel="stylesheet" href="{{ '/style.css' | url }}">
     </head>
     <body>
 
@@ -28,9 +29,9 @@
             <h1>Resume Website</h1>
             <div>hello bro</div>
             <div class="buttons">
-                <a href="/index.html" class="headerButton" data-id="{% if navTab == 'portfolio' %}active{% else %}inactive{% endif %}"><span>Portfolio</span></a>
-                <a href="/Resume.html" class="headerButton" data-id="{% if navTab == 'resume' %}active{% else %}inactive{% endif %}"><span>Resume</span></a>
-                <a href="/About.html" class="headerButton" data-id="{% if navTab == 'about' %}active{% else %}inactive{% endif %}"><span>About</span></a>
+                <a href="{{ '/index.html' | url }}" class="headerButton" data-id="{% if navTab == 'portfolio' %}active{% else %}inactive{% endif %}"><span>Portfolio</span></a>
+                <a href="{{ '/Resume.html' | url }}" class="headerButton" data-id="{% if navTab == 'resume' %}active{% else %}inactive{% endif %}"><span>Resume</span></a>
+                <a href="{{ '/About.html' | url }}" class="headerButton" data-id="{% if navTab == 'about' %}active{% else %}inactive{% endif %}"><span>About</span></a>
             </div>
 
             <label class="darkModeToggleLabel">
@@ -72,6 +73,6 @@
             </form>
         </dialog>
 
-        <script src="/main.js"></script>
+        <script src="{{ '/main.js' | url }}"></script>
     </body>
 </html>
