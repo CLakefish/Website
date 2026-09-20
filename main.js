@@ -24,7 +24,7 @@ function ToggleDyslexiaFont(toggle) {
 
 /* Theme */
 
-// const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
+const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
 
 function GetCurrentThemeSetting() {
     const stored = localStorage.getItem("theme");
