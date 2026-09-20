@@ -15,12 +15,12 @@
                 (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));
         </script>
 
-        {% if pageStyle %}<link rel="stylesheet" href="/{{ pageStyle }}">{% endif %}
+        {% if pageStyle %}<link rel="stylesheet" href="./{{ pageStyle }}">{% endif %}
 
-        {% for sheet in pageStyles %}<link rel="stylesheet" href="/{{ sheet }}">
+        {% for sheet in pageStyles %}<link rel="stylesheet" href="./{{ sheet }}">
         {% endfor %}
-        <link rel="stylesheet" href="/lightbox.css">
-        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="./lightbox.css">
+        <link rel="stylesheet" href="./style.css">
     </head>
     <body>
 
